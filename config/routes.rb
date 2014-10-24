@@ -16,9 +16,11 @@ Rails.application.routes.draw do
 
 
 
-  get '/posts/new' => 'posts#new', as: :posts
+  get '/posts/new' => 'posts#new', as: :new
 
   post '/posts' => 'posts#create'
+
+  get '/public_info' => 'posts#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

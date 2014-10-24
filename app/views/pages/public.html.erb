@@ -1,9 +1,21 @@
-<h1>List of all user</h1>
+<h1>Listind of all active user</h1>
+
+
+
+
 
 
 
 <% User.all.each do |user| %>
+  <%Post.all.each do |post| %>
+
+    <% if post.user_id == user.id %>
+      <%= link_to user.username, public_info_path(user_id: user.id) %>
         <ul>
-          <li><%= link_to user.username, '#' %></li>
+          <li>
+            <%= post.tweet %>
+          </li>
         </ul>
+    <%end%>
+  <%end%>
 <%end%>
