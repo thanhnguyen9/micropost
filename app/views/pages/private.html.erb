@@ -1,0 +1,12 @@
+<h1>Welcome to your page: <%= @current_user.username.capitalize %></h1>
+
+<%= link_to "Post a tweet", posts_path %>
+<% Post.all.each do |post| %>
+  <% if post.user_id == @current_user.id %>
+  <ul>
+    <li><%= post.tweet %></li>
+  </ul>
+  <%end%>
+
+<%end%>
+<%= link_to 'All the user', public_path %>

@@ -1,0 +1,9 @@
+<h1>List of all user</h1>
+
+
+
+<% User.all.each do |user| %>
+        <ul>
+          <li><%= link_to user.username, '#' %></li>
+        </ul>
+<%end%>
