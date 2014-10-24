@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.integer :user_id
       t.string :tweet
+      t.datetime :create_at
 
       t.timestamps
     end

@@ -1,4 +1,10 @@
-<h1> Welcome to page of: <%= @post.user.username.capitalize %></h1>
+<h1> Welcome to page of: <%= @current_user.username.capitalize %></h1>
+<% @posts.each do |post| %>
+  <% if post.user_id == @current_user.id %>
+    <ul>
+      <li><%= post.tweet %> create_at <%= post.create_at %></li>
+    </ul>
+  <%end%>
+<%end%>
 
-<h3>These are all of <%= @post.user.username.capitalize %>'s tweets</h3>
-<%= @post.tweet %>
+<form_for

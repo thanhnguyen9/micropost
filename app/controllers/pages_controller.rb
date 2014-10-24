@@ -14,8 +14,12 @@ class PagesController < ApplicationController
   end
 
   def public
+    @users = User.all
+    @posts = Post.order("create_at DESC")
+
   end
 
   def private
+    @posts = Post.order("create_at DESC")
   end
 end

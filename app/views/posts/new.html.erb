@@ -2,9 +2,6 @@
 
 <%= form_for @post do |f| %>
 
-  <%= f.label :username %>
-  <%= f.collection_select :user_id, User.all, :id, :username, prompt: true %>
-
   <%= f.label :tweet %>
   <%= f.text_field :tweet %>
 

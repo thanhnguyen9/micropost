@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
 
 
+
+
+
+
   root 'pages#private'
 
   get "private" => 'pages#private'
@@ -16,11 +20,11 @@ Rails.application.routes.draw do
 
 
 
-  get '/posts/new' => 'posts#new', as: :new
+  get 'private/posts/new' => 'posts#new', as: :new
 
   post '/posts' => 'posts#create'
 
-  get '/public_info' => 'posts#show'
+  get '/show' => 'posts#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

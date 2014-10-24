@@ -1,16 +1,9 @@
-<h1>Listind of all active user</h1>
+<h1>Listings recently tweets of all user</h1>
 
-
-
-
-
-
-
-<% User.all.each do |user| %>
-  <%Post.all.each do |post| %>
-
+<% @posts.each do |post| %>
+  <% @users.each do |user| %>
     <% if post.user_id == user.id %>
-      <%= link_to user.username, public_info_path(user_id: user.id) %>
+      <%= link_to user.username, show_path(user_id: post.user_id) %>
         <ul>
           <li>
             <%= post.tweet %>
