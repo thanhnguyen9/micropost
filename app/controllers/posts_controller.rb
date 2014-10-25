@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
     @post = Post.new(post_params)
     @post.user_id = @current_user.id
+
     @post.create_at = DateTime.now
     if @post.save
 
@@ -24,6 +25,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     @posts = Post.order('create_at DESC')
   end
 
