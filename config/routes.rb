@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :relationships
+
   root 'pages#private'
 
   get 'posts/new'

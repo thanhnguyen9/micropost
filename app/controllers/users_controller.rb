@@ -14,6 +14,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def following? user
+    self.followeds.include? user
+  end
+
+  def follow user
+      Relationship.create(follower_id: self.id, followeds: user.id)
+  end
+
   private
 
   def params_user

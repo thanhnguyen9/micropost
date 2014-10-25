@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  follwers_id: 1
+  followed_id: 1
+
+two:
+  follwers_id: 1
+  followed_id: 1
