@@ -3,7 +3,7 @@
 <% @posts.each do |post| %>
   <% @users.each do |user| %>
     <% if post.user_id == user.id %>
-      <%= link_to user.username, show_path(user_id: post.user_id) %>
+      <%= link_to user.username, posts_show_path(user_id: post.user_id) %>
         <ul>
           <li>
             <%= post.tweet %>

@@ -25,7 +25,6 @@ class PostsController < ApplicationController
 
   def show
     @posts = Post.order('create_at DESC')
-
   end
 
   private
