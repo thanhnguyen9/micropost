@@ -8,18 +8,19 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to private_path
+      redirect_to private_path, notice: "Thanks for signing up"
     else
       render :new
     end
   end
 
-  def following? user
+
+  def following?(user)
     self.followeds.include? user
   end
 
-  def follow user
-      Relationship.create(follower_id: self.id, followeds: user.id)
+  def follow(user)
+      Relationship.create(follower_id: self.id, followed_id: user.id)
   end
 
   private

@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   get '/posts/show' => 'posts#show'
 
+
   get '/users/new' => 'users#new', as: :users_new
 
   post '/users' => 'users#create'

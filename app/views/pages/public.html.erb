@@ -1,4 +1,4 @@
-<h1>Listings recently tweets of all user</h1>
+<h1>Hey <%= @current_user.username.capitalize %>. Here are the recently Tweets</h1>
 
 <% @posts.each do |post| %>
   <% @users.each do |user| %>
