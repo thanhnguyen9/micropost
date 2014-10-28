@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:id])
     @posts = Post.order('create_at DESC')
-    @relationship = Relationship.new(follower_id: @current_user.id, followed_id: @user.id) if @current_user
+    @relationship = Relationship.new(user_id: @current_user.id, friend_id: @user.id) if @current_user
   end
 
   private

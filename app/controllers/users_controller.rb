@@ -8,7 +8,11 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to private_path, notice: "Thanks for signing up"
+
+      session[:signed_in] = true
+
+      redirect_to session[:return_to], notice: "You Signed in"
+
     else
       render :new
     end

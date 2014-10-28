@@ -9,6 +9,6 @@
 
 
 <%= form_tag @relationship, url: relationships_path do %>
-  <%= hidden_field_tag :followed_id, @user.id %>
+  <%= hidden_field_tag :friend_id, @user.id %>
   <%= submit_tag "Follow" %>
 <% end %>

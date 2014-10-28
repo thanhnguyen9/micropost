@@ -1,4 +1,4 @@
 class Relationship < ActiveRecord::Base
-  belongs_to :follower, class: "User"
-  belongs_to :followed, class: "User"
+  belongs_to :user
+  belongs_to :friend, class_name: "User"
 end
