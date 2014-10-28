@@ -1,14 +1,18 @@
 <h1> Welcome to page of: <%= @user.username.capitalize %></h1>
-<% @posts.each do |post| %>
-  <% if post.user_id == @user.id %>
-    <ul>
-      <li><%= post.tweet %> create_at <%= post.create_at %></li>
-    </ul>
-  <%end%>
+
+      <% @posts.each do |post| %>
+        <% if post.user_id == @user.id %>
+        <ul>
+          <li><%= post.tweet %> create_at <%= post.create_at %></li>
+        </ul>
+        <%end%>
+      <%end%>
+
+      <%= debug @relationship %>
+
+<% if !@current_user.friends.include? @user %>
+
+  <%= button_to 'Follow', relationships_path(friend_id: @user.id) %>
+<%else %>
+  <%= button_to 'UnFollow', relationships_path(user_id: @current_id, friend_id: @user.id), method: :delete %>
 <%end%>
-
-
-<%= form_tag @relationship, url: relationships_path do %>
-  <%= hidden_field_tag :friend_id, @user.id %>
-  <%= submit_tag "Follow" %>
-<% end %>

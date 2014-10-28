@@ -9,7 +9,7 @@
   <%end%>
 <%end%>
 
-<h2>Tweets of User you're FOLLOWING</h2>
+<h3>Tweets of <%= @current_user.username.capitalize %> FOLLOWING</h3>
 <% @relationships.each do |relationship| %>
   <ul>
       <li>

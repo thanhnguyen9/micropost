@@ -33,4 +33,6 @@ Rails.application.routes.draw do
 
   post '/users' => 'users#create'
 
+  delete '/relationships' => "relationships#destroy"
+
 end

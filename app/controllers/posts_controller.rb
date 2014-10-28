@@ -28,6 +28,8 @@ class PostsController < ApplicationController
     @user = User.find(params[:id])
     @posts = Post.order('create_at DESC')
     @relationship = Relationship.new(user_id: @current_user.id, friend_id: @user.id) if @current_user
+
+    
   end
 
   private

@@ -19,9 +19,11 @@ class RelationshipsController < ApplicationController
       @relationships = Relationship.find(params[:id])
       redirect_to private_path
     end
+
     def destroy
-      @relationship = Relationship.find(params[:id])
-      @relationship.delete
-      redirect_to private_path, notice: "Unfollow successful"
+      @relationship = Relationship.where(:user_id => @current_user.id,:friend_id => params[:friend_id])
+      @relationship.first.delete
+
+      redirect_to root_path, notice: "Unfollow successful"
     end
 end
