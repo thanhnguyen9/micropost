@@ -1,8 +1,9 @@
-<h1>Hey <%= @current_user.username.capitalize %>. Here are the recently Tweets</h1>
+<h1>Hey <%= @current_user.username.capitalize %>. Here are the recently Posts</h1>
 
 <% @posts.each do |post| %>
   <% @users.each do |user| %>
     <% if post.user_id == user.id %>
+      <%= image_tag user.photo_url, class: "public-image" %>
       <%= link_to user.username, posts_show_path(id: post.user_id) %>
         <ul>
           <li>

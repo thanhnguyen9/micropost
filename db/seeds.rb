@@ -1,8 +1,8 @@
-User.create username: "peter", password: "12345", photo_url: Faker::Company.logo
-User.create username: "john", password: "23456", photo_url: Faker::Company.logo
-User.create username: "henry", password: "34567", photo_url: Faker::Company.logo
-User.create username: "jesse", password: "45678", photo_url: Faker::Company.logo
-User.create username: "tom", password: "56789", photo_url: Faker::Company.logo
+User.create username: "peter", password: "12345", photo_url: "http://stcullen.weebly.com/uploads/1/7/6/0/1760026/2770390_orig.jpg"
+User.create username: "john", password: "23456", photo_url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmtH-ttEeSRD17fJg2c_NUp9f-wLMxzhI5kEx4Ybr-ahQHLEQL"
+User.create username: "henry", password: "34567", photo_url: "https://pbs.twimg.com/profile_images/1368297285/peter_hollens_030.jpg"
+User.create username: "jesse", password: "45678", photo_url: "http://ia.media-imdb.com/images/M/MV5BMTA4NDg5MTc4NzNeQTJeQWpwZ15BbWU3MDEyMDIwNjE@._V1_SX640_SY720_.jpg"
+User.create username: "tom", password: "56789", photo_url: "http://ia.media-imdb.com/images/M/MV5BMTY3MzMzNTc0OF5BMl5BanBnXkFtZTcwMTAyNzg0OA@@._V1_SY317_CR20,0,214,317_AL_.jpg"
 
 
 

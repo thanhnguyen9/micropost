@@ -14,13 +14,13 @@ class PagesController < ApplicationController
   end
 
   def public
-    @users = User.all
-    @posts = Post.order("create_at DESC").page(params[:page]).per(10)
 
+    @posts = Post.order("create_at DESC").page(params[:page]).per(10)
+    @users = User.all.includes(:posts)
   end
 
   def private
-    @posts = Post.order("create_at DESC").page(params[:page]).per(4)
+    @posts = Post.order("create_at DESC").page(params[:page]).per(10)
 
     @relationships = []
     Relationship.all.each do |relationship|

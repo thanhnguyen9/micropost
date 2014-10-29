@@ -2,7 +2,7 @@
 <h1>Welcome to your page: <%= @current_user.username.capitalize %></h1>
 
 <%= image_tag @current_user.photo_url, class:"image" %>
-<%= link_to "Post a tweet", new_path(user_id: @current_user.id) %>
+<%= link_to "Create a post", new_path(user_id: @current_user.id) %>
 <% @posts.each do |post| %>
   <% if post.user_id == @current_user.id %>
   <ul>
@@ -11,7 +11,7 @@
   <%end%>
 <%end%>
 
-<h3>Tweets of <%= @current_user.username.capitalize %> FOLLOWING</h3>
+<h4>People <%= @current_user.username.capitalize %> FOLLOWING</h4>
 
 
         <% @posts.each do |post| %>
@@ -21,6 +21,7 @@
               <% if post.user_id == relationship.friend_id %>
               <ul>
                 <li>
+                  <%= image_tag post.user.photo_url, class: "public-image" %>
                   <%= link_to relationship.friend.username, posts_show_path(id: relationship.friend.id) %>
                   <%= post.tweet %>
                   </li>
@@ -28,6 +29,5 @@
               <%end%>
           <%end%>
         <%end%>
+<%= paginate @posts %><br />
 <%= link_to 'All the user', public_path(user_id: @current_user.id) %>
-
-<%= paginate @posts %>
