@@ -19,7 +19,6 @@
 <body>
 
 
-<div class="container">
   <%= link_to "Home", private_path %>
 
   <% if user_signed_in? %>
@@ -27,6 +26,8 @@
   <% end %>
 
   <%= notice %>
+
+<div class="container">
     <%= yield %>
 </div>
 </body>

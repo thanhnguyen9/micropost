@@ -1,7 +1,7 @@
 
 <h1>Welcome to your page: <%= @current_user.username.capitalize %></h1>
 
-<%= image_tag @current_user.photo_url, class:"image" %>
+<%= image_tag @current_user.photo_url, class:"pic" %>
 <%= link_to "Create a post", new_path(user_id: @current_user.id) %>
 <% @posts.each do |post| %>
   <% if post.user_id == @current_user.id %>
