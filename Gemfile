@@ -44,3 +44,5 @@ gem 'faker'
 gem 'better_errors'
 
 gem 'quiet_assets', group: [:development, :test]
+
+gem 'kaminari'

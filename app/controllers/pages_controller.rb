@@ -15,12 +15,13 @@ class PagesController < ApplicationController
 
   def public
     @users = User.all
-    @posts = Post.order("create_at DESC")
+    @posts = Post.order("create_at DESC").page(params[:page]).per(10)
 
   end
 
   def private
-    @posts = Post.order("create_at DESC")
+    @posts = Post.order("create_at DESC").page(params[:page]).per(4)
+
     @relationships = []
     Relationship.all.each do |relationship|
       if relationship.user_id == @current_user.id

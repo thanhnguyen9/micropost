@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     @posts = Post.order('create_at DESC')
     @relationship = Relationship.new(user_id: @current_user.id, friend_id: @user.id) if @current_user
 
-    
+
   end
 
   private
