@@ -1,15 +1,27 @@
+
+
 body {
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA55SM8GnmOI_uCguRPhT9e_QB-796bX6yVXpSW8T9rDe31ckQ") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  .container-style {color: white;}
  }
 
+.nav {
+  color: black;
+  text-align: center;
+  background: white;
+  padding: 1em;
 
 
+}
+
+a {
+color: #FD095C;
+text-decoration: none;
+padding-left: 1em;
+}
 
 .pic {width: 120px; height: 120px; border-radius: 70px;}
 .public-image {width: 60px; height: 60px; border-radius: 30px;}

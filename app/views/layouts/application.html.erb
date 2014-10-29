@@ -18,15 +18,15 @@
 </head>
 <body>
 
-
-  <%= link_to "Home", private_path %>
+<div class="nav">
+  <span class='home'><%= link_to "Home", private_path %></span>
 
   <% if user_signed_in? %>
     <%= link_to "Sign Out", destroy_session_path, method: "delete" %>
   <% end %>
 
   <%= notice %>
-
+</div>
 <div class="container">
     <%= yield %>
 </div>
