@@ -28,6 +28,7 @@ class PagesController < ApplicationController
         @relationships << relationship
       end
     end
+    
 
   end
 end

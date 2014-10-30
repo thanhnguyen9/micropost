@@ -1,6 +1,6 @@
 
 <h1>Welcome to your page: <%= @current_user.username.capitalize %></h1>
-
+<div class="col-md-5 well" >
 <%= image_tag @current_user.photo_url, class:"pic" %>
 <%= link_to "Create a post", new_path(user_id: @current_user.id) %>
 <% @posts.each do |post| %>
@@ -11,6 +11,9 @@
   <%end%>
 <%end%>
 
+<%= link_to 'All the user', public_path(user_id: @current_user.id) %>
+</div>
+<div class="col-md-5 col-md-offset-1 well">
 <h4>People <%= @current_user.username.capitalize %> FOLLOWING</h4>
 
 
@@ -29,5 +32,6 @@
               <%end%>
           <%end%>
         <%end%>
-<%= paginate @posts %><br />
-<%= link_to 'All the user', public_path(user_id: @current_user.id) %>
+
+  <%= paginate @posts %><br />
+      </div>

@@ -1,3 +1,4 @@
+<div class="public">
 <h1>Hey <%= @current_user.username.capitalize %>. Here are the recently Posts</h1>
 
 <% @posts.each do |post| %>
@@ -15,3 +16,4 @@
 <%end%>
 
 <%= paginate @posts %>
+</div>
