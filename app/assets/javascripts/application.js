@@ -1,16 +1,133 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+
+$(document).ready(function() {
+
+  // talk to the web
+
+  $("button#hello").click(function() {
+    $("ul#user").prepend("<li>Hello! <span class='clickable'>[ x ]</span> </li>");
+    $("ul#webpage").prepend("<li>Hello there! <span class='clickable'>[ x ]</span> </li>");
+
+    $("ul#user").children("li").click(function(){
+
+      $(this).remove();
+    });
+
+     $("ul#webpage").children("li").first().click(function(){
+       $(this).remove();
+     });
+  });
+
+  $("button#goodbye").click(function() {
+    $("ul#user").prepend("<li>Goodbye! <span class='clickable'>[ x ]</span> </li>");
+    $("ul#webpage").prepend("<li>Goodbye, dear user! <span class='clickable'>[ x ]</span> </li>");
+
+    $("ul#user").children("li").click(function(){
+
+      $(this).remove();
+    });
+
+     $("ul#webpage").children("li").first().click(function(){
+       $(this).remove();
+     });
+
+  });
+
+  $("button#stop").click(function() {
+    $("ul#user").prepend("<li>Stop copying me! <span class='clickable'>[ x ]</span> </li>");
+    $("ul#webpage").prepend("<li>Haha <span class='clickable'>[ x ]</span> </li>");
+
+    $("ul#user").children("li").click(function(){
+
+      $(this).remove();
+    });
+
+     $("ul#webpage").children("li").first().click(function(){
+       $(this).remove();
+     });
+
+  });
+
+
+
+
+
+  // change background color
+
+
+
+  $("button#background-green").click(function(){
+    $("body").removeClass();
+    $("body").addClass("green-background")
+    $("body").addClass("blue-text")
+  });
+
+  $("button#background-yellow").click(function(){
+    $("body").removeClass();
+    $("body").addClass("yellow-background")
+    $("body").addClass("red-text")
+  });
+
+  $("button#background-red").click(function(){
+    $("body").removeClass();
+    $("body").addClass("red-background")
+    $("body").addClass("green-text")
+  });
+
+  // wrap pagraph in red border
+
+  $(".border").click(function(){
+    $("p").addClass("red-border")
+    });
+
+      // back to original
+  $("button#original").click(function(){
+    $("body").removeClass();
+    $("body").addClass("original-background")
+  });
+
+
+
+
+
+
+
+
+  // jokes
+
+  $("button#marriage-button").click(function(){
+    $("#college").hide();
+    $("#parent").hide();
+    $("#cop").hide();
+    $("#marriage").toggle();
+    });
+
+  $("button#college-button").click(function(){
+    $("#marriage").hide();
+    $("#parent").hide();
+    $("#cop").hide();
+    $("#college").toggle();
+    });
+
+  $("button#parent-button").click(function(){
+    $("#marriage").hide();
+    $("#college").hide();
+    $("#cop").hide();
+    $("#parent").toggle();
+    });
+
+  $("button#cop-button").click(function(){
+    $("#marriage").hide();
+    $("#college").hide();
+    $("#parent").hide();
+    $("#cop").toggle();
+    });
+
+
+
+
+
+
+
+
+});

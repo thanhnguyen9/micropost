@@ -5,6 +5,10 @@ class PostsController < ApplicationController
     @current_user = User.find(session[:user_id]) if session[:signed_in]
   end
 
+  def index
+    render :delete
+  end
+
   def new
     user = User.find(params[:user_id])
     @post = user.posts.new
@@ -28,8 +32,10 @@ class PostsController < ApplicationController
     @user = User.find(params[:id])
     @posts = Post.order('create_at DESC')
     @relationship = Relationship.new(user_id: @current_user.id, friend_id: @user.id) if @current_user
+  end
 
-
+  def delete
+    @post = Post.find(params[:id])
   end
 
   private

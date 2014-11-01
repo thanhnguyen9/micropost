@@ -1,16 +1,40 @@
-<h1> Welcome to page of: <%= @user.username.capitalize %></h1>
+<div class="top-page"></div>
 
-      <% @posts.each do |post| %>
-        <% if post.user_id == @user.id %>
-        <ul>
-          <li><%= post.tweet %> create_at <%= post.create_at %></li>
-        </ul>
-        <%end%>
-      <%end%>
-
-<% if !@current_user.friends.include? @user %>
-
-  <%= button_to 'Follow', relationships_path(friend_id: @user.id) %>
-<%else %>
-  <%= button_to 'UnFollow', relationships_path(user_id: @current_id, friend_id: @user.id), method: :delete %>
+<div class="col-md-3 well" >
+<%= image_tag @current_user.photo_url, class:"pic" %>
+<%= link_to "Create a post", new_path(user_id: @current_user.id) %>
+<% @posts.each do |post| %>
+  <% if post.user_id == @current_user.id %>
+  <ul>
+    <li><%= post.tweet %> is created at <%= post.create_at.strftime("%b %e, %l:%M %p") %></li>
+  </ul>
+  <%end%>
 <%end%>
+</div>
+
+
+<div class="col-md-6 well">
+  <%= image_tag @user.photo_url, class:"pic" %>
+
+  <% @posts.each do |post| %>
+    <% if post.user_id == @user.id %>
+    <ul>
+      <li><%= post.tweet %> on <%= post.create_at  %></li>
+    </ul>
+    <%end%>
+  <%end%>
+
+
+  <% if !@current_user.friends.include? @user %>
+
+    <%= button_to 'Follow', relationships_path(friend_id: @user.id) %>
+  <%else %>
+    <%= button_to 'UnFollow', relationships_path(user_id: @current_id, friend_id: @user.id), method: :delete %>
+  <%end%>
+
+  <%= link_to 'All the user', public_path(user_id: @current_user.id) %>
+
+</div>
+
+
+<div class="col-md-2 well">Game</div>

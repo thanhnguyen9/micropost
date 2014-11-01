@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
 
 
-
   get "private" => 'pages#private'
   get 'public' => 'pages#public'
 
@@ -28,11 +27,24 @@ Rails.application.routes.draw do
 
   get '/posts/show' => 'posts#show'
 
+  get '/private/posts' => 'posts#index'
+
+  delete '/private/posts' => 'posts#delete'
+
+
+
 
   get '/users/new' => 'users#new', as: :users_new
 
   post '/users' => 'users#create'
 
   delete '/relationships' => "relationships#destroy"
+
+
+  get '/talk' => 'pages#talk'
+
+  get '/change_background_color' => 'pages#change'
+
+  get '/jokes' => 'pages#jokes'
 
 end

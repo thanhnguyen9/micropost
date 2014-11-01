@@ -20,7 +20,7 @@ class PagesController < ApplicationController
   end
 
   def private
-    @posts = Post.order("create_at DESC").page(params[:page]).per(10)
+    @posts = Post.order("create_at DESC").page(params[:page])
 
     @relationships = []
     Relationship.all.each do |relationship|
@@ -28,7 +28,15 @@ class PagesController < ApplicationController
         @relationships << relationship
       end
     end
-    
+  end
+
+  def talk
+  end
+
+  def change
+  end
+
+  def jokes
 
   end
 end

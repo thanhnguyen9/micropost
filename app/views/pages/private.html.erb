@@ -1,37 +1,50 @@
 
-<h1>Welcome to your page: <%= @current_user.username.capitalize %></h1>
-<div class="col-md-5 well" >
-<%= image_tag @current_user.photo_url, class:"pic" %>
-<%= link_to "Create a post", new_path(user_id: @current_user.id) %>
-<% @posts.each do |post| %>
-  <% if post.user_id == @current_user.id %>
-  <ul>
-    <li><%= post.tweet %> is created at <%= post.create_at %></li>
-  </ul>
-  <%end%>
-<%end%>
+<div class="top-page"></div>
 
-<%= link_to 'All the user', public_path(user_id: @current_user.id) %>
-</div>
-<div class="col-md-5 col-md-offset-1 well">
-<h4>People <%= @current_user.username.capitalize %> FOLLOWING</h4>
+  <div class="top-page"></div>
+    <div class="col-md-2 well" >
+      <%= render partial: "profile" %>
+  </div>
+
+<div class="col-md-7 well">
+<h3>People <%= @current_user.username.capitalize %> FOLLOWING</h3>
 
 
         <% @posts.each do |post| %>
+
+          <% if post.user_id == @current_user.id %>
+            <ul>
+              <li>
+                <%= image_tag @current_user.photo_url, class: "public-image" %>
+                <%= post.tweet %>
+                <%= post.create_at %>
+                <%= link_to "Delete", private_posts_path(post.id), method: :delete, data: {confirm: "Are you sure?"} %>
+
+            </ul>
+          <%end%>
+
           <% @relationships.each do |relationship| %>
 
 
-              <% if post.user_id == relationship.friend_id %>
+              <% if post.user_id == relationship.friend_id%>
               <ul>
                 <li>
                   <%= image_tag post.user.photo_url, class: "public-image" %>
                   <%= link_to relationship.friend.username, posts_show_path(id: relationship.friend.id) %>
+
                   <%= post.tweet %>
+                  <%= post.create_at %>
                   </li>
               </ul>
+
+
               <%end%>
           <%end%>
         <%end%>
 
   <%= paginate @posts %><br />
       </div>
+
+<div class="col-md-2 well game">
+  <%= render partial: "game" %>
+  </div>
