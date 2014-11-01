@@ -21,7 +21,7 @@ body {
 }
 
 a {
-color: #EC0E30;
+color: #0E2ED0;
 text-decoration: none;
 padding-left: 1em;
 }
@@ -76,15 +76,13 @@ padding-left: 1em;
 
 
 .clickable {
-  color: #0088cc;;
   cursor: pointer;
-  }
+  color: #0088cc;;
+}
 
-.clickable:hover {text-decoration: underline}
-
-
-
-
+.clickable:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -125,12 +123,7 @@ padding-left: 1em;
   font-family: 'Indie Flower', cursive;
  }}
 
-.clickable {
-  color: blue;
-  cusor: pointer;
-}
 
-.clickable {text-decoration: underline}
 .red-border {
   background: yellow;
   border: 2px solid red
