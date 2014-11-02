@@ -3,7 +3,7 @@ User.create username: "john", password: "23456", photo_url: "https://encrypted-t
 User.create username: "henry", password: "34567", photo_url: "https://pbs.twimg.com/profile_images/1368297285/peter_hollens_030.jpg"
 User.create username: "jesse", password: "45678", photo_url: "http://ia.media-imdb.com/images/M/MV5BMTA4NDg5MTc4NzNeQTJeQWpwZ15BbWU3MDEyMDIwNjE@._V1_SX640_SY720_.jpg"
 User.create username: "tom", password: "56789", photo_url: "http://ia.media-imdb.com/images/M/MV5BMTY3MzMzNTc0OF5BMl5BanBnXkFtZTcwMTAyNzg0OA@@._V1_SY317_CR20,0,214,317_AL_.jpg"
-
+U
 
 
   Post.create user_id: 1, tweet: Faker::Lorem.sentence

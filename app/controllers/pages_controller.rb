@@ -22,12 +22,7 @@ class PagesController < ApplicationController
   def private
     @posts = Post.order("create_at DESC").page(params[:page])
 
-    @relationships = []
-    Relationship.all.each do |relationship|
-      if relationship.user_id == @current_user.id
-        @relationships << relationship
-      end
-    end
+
   end
 
   def talk
@@ -36,7 +31,9 @@ class PagesController < ApplicationController
   def change
   end
 
-  def jokes
+  def adventure
+  end
 
+  def jokes
   end
 end

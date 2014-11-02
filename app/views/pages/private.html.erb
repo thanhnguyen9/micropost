@@ -10,6 +10,7 @@
 <h3>People <%= @current_user.username.capitalize %> FOLLOWING</h3>
 
 
+
         <% @posts.each do |post| %>
 
           <% if post.user_id == @current_user.id %>
@@ -23,7 +24,7 @@
             </ul>
           <%end%>
 
-          <% @relationships.each do |relationship| %>
+          <% Relationship.all.each do |relationship| %>
 
 
               <% if post.user_id == relationship.friend_id%>

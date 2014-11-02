@@ -1,19 +1,18 @@
 <div class="top-page"></div>
 
-<div class="col-md-3 well" >
-<%= image_tag @current_user.photo_url, class:"pic" %>
-<%= link_to "Create a post", new_path(user_id: @current_user.id) %>
-<% @posts.each do |post| %>
-  <% if post.user_id == @current_user.id %>
-  <ul>
-    <li><%= post.tweet %> is created at <%= post.create_at.strftime("%b %e, %l:%M %p") %></li>
-  </ul>
-  <%end%>
-<%end%>
+<div class="col-md-2 well" >
+
+      <%= image_tag @current_user.photo_url, class:"pic" %>
+      <h4 class="username"><%= @current_user.username %></h4>
+      <%= link_to "Create a post", new_path(user_id: @current_user.id) %><br />
+
+
+      <%= link_to 'All the user', public_path(user_id: @current_user.id) %>
+
 </div>
 
 
-<div class="col-md-6 well">
+<div class="col-md-7 well">
   <%= image_tag @user.photo_url, class:"pic" %>
 
   <% @posts.each do |post| %>
@@ -37,4 +36,11 @@
 </div>
 
 
-<div class="col-md-2 well">Game</div>
+<div class="col-md-2 well game">
+
+<h3>Game</h3><br />
+<%= link_to "Talk to the web", talk_path %>
+<%= link_to "Change Background ", change_background_color_path %>
+<%= link_to "Funny Story", funny_path %><br>
+<%= link_to "Jokes", jokes_path %>
+</div>

@@ -6,7 +6,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Dosis', sans-serif;;
  }
 
 .username {text-align: center;}
@@ -44,12 +44,11 @@ padding-left: 1em;
   }
 
 .col-md-7 {
-  margin-left: 1em;
-  margin-right: 4em;
+  margin-left: 3em;
+  margin-right: 3em;
 
 }
 
-.game {padding-right: 1em;}
 .well {
   padding: 2em;
 }
@@ -58,10 +57,12 @@ padding-left: 1em;
 
 .col-md-2 {
  text-align: center;
+ }
 
- .game {
-  padding-top: -1em; }
-  }
+.game {
+ margin-top: 0em;
+ text-align: center;
+ }
 
 
 
@@ -129,4 +130,10 @@ padding-left: 1em;
   border: 2px solid red
   }
 
+  /*jokes*/
+
 #marriage, #college, #parent, #cop {display: none;}
+
+/*funny story*/
+
+#story {display: none}

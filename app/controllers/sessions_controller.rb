@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+
+  def index
+    render :sign_out
+  end
   def new
   end
 

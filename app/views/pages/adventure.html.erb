@@ -1,0 +1,65 @@
+
+<div class="top-page"></div>
+
+  <div class="top-page"></div>
+    <div class="col-md-2 well" >
+      <%= render partial: "profile" %>
+  </div>
+
+
+
+
+
+<div class="col-md-7 well">
+
+  <div id="blank">
+      <form>
+        <div class="form-group">
+          <label for="person1">Your Name</label>
+          <input type="text" class="form-control" id="person1" placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+          <label for="person2">Another Name</label>
+          <input type="text" class="form-control" id="person2" placeholder="Another name">
+        </div>
+
+        <div class="form-group">
+          <label for="animal">An Animal</label>
+          <input type="text" class="form-control" id="animal" placeholder="An Animal">
+        </div>
+
+        <div class="form-group">
+          <label for="exclamation">An exclamation</label>
+          <input type="text" class="form-control" id="exclamation" placeholder="An exclamation">
+        </div>
+
+        <div class="form-group">
+          <label for="verb">A past tense verb</label>
+          <input type="text" class="form-control" id="verb" placeholder="A past tense verb">
+        </div>
+
+        <div class="form-group">
+          <label for="noun">A noun</label>
+          <input type="text" class="form-control" id="noun" placeholder="A past tense verb">
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+
+      </form>
+    </div>
+
+
+  <div id="story">
+  <h1>A fantastical adventure</h1>
+  <p>One day, <span class="person1"></span> and <span class="person2"></span> were walking through the woods, when suddenly a giant <span class="animal"></span> appeared.
+    "<span class="exclamation"></span>", <span class="person1"></span> cried. The two of them <span class="verb"></span> as quickly possible, and when they were safe,
+    <span class="person1"></span> and <span class="person2"></span> gave each other a giant <span class="noun"></span>.</p>
+  </div>
+</div>
+
+
+
+  <div class="col-md-2 well game">
+    <%= render partial: "game" %>
+  </div>

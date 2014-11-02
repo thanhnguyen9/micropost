@@ -8,8 +8,10 @@ Rails.application.routes.draw do
 
   get 'posts/create'
 
+  get '/sessions' => 'sessions#index'
+
   get 'sessions/new', as: :sign_in
-  post "/sessions" => "sessions#create", as: :sessions
+  post "/sessions" => "sessions#create"
   delete "sessions" => "sessions#sign_out", as: :destroy_session
 
 
@@ -44,6 +46,8 @@ Rails.application.routes.draw do
   get '/talk' => 'pages#talk'
 
   get '/change_background_color' => 'pages#change'
+
+  get '/adventure' => 'pages#adventure'
 
   get '/jokes' => 'pages#jokes'
 
