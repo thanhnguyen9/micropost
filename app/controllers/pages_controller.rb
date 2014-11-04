@@ -22,6 +22,10 @@ class PagesController < ApplicationController
   def private
     @posts = Post.order("create_at DESC").page(params[:page])
     @total = 0
+    @relationships = []
+   Relationship.all.each do |relationship|
+     @relationships << relationship if relationship.user_id == @current_user.id
+    end
 
   end
 

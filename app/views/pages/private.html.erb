@@ -26,9 +26,9 @@
             </ul>
           <%end%>
 
-          <% Relationship.all.each do |relationship| %>
 
 
+              <% @relationships.each do |relationship| %>
 
               <% if post.user_id == relationship.friend_id%>
               <ul>
@@ -43,6 +43,8 @@
               <%end%>
 
           <%end%>
+
+          
         <%end%>
 
   <%= paginate @posts %><br />
