@@ -20,7 +20,7 @@
               <li>
                 <%= image_tag @current_user.photo_url, class: "public-image" %>
                 <%= post.tweet %>
-                <%= post.create_at %>
+                <%= post.create_at.strftime("%b %e, %l:%M %p") %>
                 <%= link_to "Delete", private_posts_path(post.id), method: :delete, data: {confirm: "Are you sure?"} %>
 
             </ul>
@@ -37,7 +37,7 @@
                   <%= link_to relationship.friend.username, posts_show_path(id: relationship.friend.id) %>
 
                   <%= post.tweet %>
-                  <%= post.create_at %>
+                  <%= post.create_at.strftime("%b %e, %l:%M %p") %>
                   </li>
               </ul>
               <%end%>

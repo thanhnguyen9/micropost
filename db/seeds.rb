@@ -1,23 +1,23 @@
-User.create username: "peter", password: "12345", photo_url: "http://stcullen.weebly.com/uploads/1/7/6/0/1760026/2770390_orig.jpg"
-User.create username: "john", password: "23456", photo_url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmtH-ttEeSRD17fJg2c_NUp9f-wLMxzhI5kEx4Ybr-ahQHLEQL"
-User.create username: "henry", password: "34567", photo_url: "https://pbs.twimg.com/profile_images/1368297285/peter_hollens_030.jpg"
-User.create username: "jesse", password: "45678", photo_url: "http://ia.media-imdb.com/images/M/MV5BMTA4NDg5MTc4NzNeQTJeQWpwZ15BbWU3MDEyMDIwNjE@._V1_SX640_SY720_.jpg"
-User.create username: "tom", password: "56789", photo_url: "http://ia.media-imdb.com/images/M/MV5BMTY3MzMzNTc0OF5BMl5BanBnXkFtZTcwMTAyNzg0OA@@._V1_SY317_CR20,0,214,317_AL_.jpg"
+User.create username: "peter", password: "12345", photo_url: "http://www.hungarianfootball.com/wp-content/uploads/2012/07/300px-Peter-vermes.jpg"
+User.create username: "john", password: "23456", photo_url: "http://www.mypccadocs.com/images/pcca_lee_288.JPG"
+User.create username: "henry", password: "34567", photo_url: "http://img2.wikia.nocookie.net/__cb20140422175939/s__/supernatural/de/images/thumb/6/6e/Henry_Winchester.png/300px-Henry_Winchester.png"
+User.create username: "jesse", password: "45678", photo_url: "http://thisistwitchy.files.wordpress.com/2014/09/roger-goodell-300px.jpg"
+User.create username: "tom", password: "56789", photo_url: "http://hatfieldhousemusicfestival.org.uk/wordpress/wp-content/uploads/2014/07/Tom-Hankey-300px.jpg"
 
 
 
-  Post.create user_id: 1, tweet: Faker::Lorem.sentence
-  Post.create user_id: 2, tweet: Faker::Lorem.sentence
-  Post.create user_id: 1, tweet: Faker::Lorem.sentence
-  Post.create user_id: 3, tweet: "sent porta diam vitae nulla pharetra tristique. Nam justo diam, euismod non odio quis, sollicitudin congue arcu. Phasellus varius "
-  Post.create user_id: 4, tweet: 'at blandit. Pellentesque ipsum dolor, vulputate vel volutpat in, malesuada ac tellus. Cum sociis natoque penatibus et magnis dis '
-  Post.create user_id: 1, tweet: 'din ornare ac id elit. Mauris consequat sagittis sem a viverra. Donec vulputate bibendum erat, a volutpat ex vestibulum eu. Mauris'
-  Post.create user_id: 3, tweet: 'e posuere ultrices. Cras imperdiet lobortis erat id varius. Curabitur gravida venenatis turpis sed placerat. Morbi at felis et m'
-  Post.create user_id: 2, tweet: 'et sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris massa arcu, sollicitudin i'
-  Post.create user_id: 2, tweet: 'rdum nunc. Nulla faucibus sem a ornare accumsan. Aliquam id lectus ante. Fusce vulputate volutpat augue, vitae maximus libero dictum et. Fusce porttitor, urna eu pharetra sollicitudin, nisl massa aliquet massa, gravida hendrerit felis ex sit am'
-  Post.create user_id: 3, tweet: 'ulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris massa arcu, sollicitudin in maximus '
-  Post.create user_id: 5, tweet: "sequat sagittis sem a viverra. Donec vulputate bibendum erat, a volutpat ex vestibulum eu. Mauris feugiat sem eu nisi lacinia la"
-  Post.create user_id: 3, tweet: 'arcu mattis lobortis. Donec non fringilla massa, sed varius ligula. Nam ac nunc luctus, luctus velit at, ultricies tortor. Aliquam placerat neque sit am'
-  Post.create user_id: 4, tweet: 'Etiam quis nibh rhoncus, tincidunt ex malesuada, maximus nunc. Vivamus et lobortis mau'
-  Post.create user_id: 1, tweet: 'tra tristique. Nam justo diam, euismod non odio quis, sollicitudin congue arcu. Phasellus varius lacus nec feugiat blandit. '
-  Post.create user_id: 2, tweet: 'm et. Fusce porttitor, urna eu pharetra sollicitudin, nisl massa aliquet massa, gravida hendrerit felis ex sit amet ligula. Do'
+  Post.create user_id: 1, tweet: Faker::Lorem.sentence, create_at: "2014-10-04 21:39:41 UTC"
+  Post.create user_id: 2, tweet: Faker::Lorem.sentence, create_at: "2014-10-04 21:09:41 UTC"
+  Post.create user_id: 1, tweet: Faker::Lorem.sentence,  create_at: "2014-10-04 21:18:41 UTC"
+  Post.create user_id: 3, tweet: "sent porta diam vitae nulla pharetra tristique. Nam justo diam, euismod non odio quis, sollicitudin congue arcu. Phasellus varius " , create_at: "2014-10-04 21:19:41 UTC"
+  Post.create user_id: 4, tweet: 'at blandit. Pellentesque ipsum dolor, vulputate vel volutpat in, malesuada ac tellus. Cum sociis natoque penatibus et magnis dis ', create_at: "2014-10-04 21:21:41 UTC"
+  Post.create user_id: 1, tweet: 'din ornare ac id elit. Mauris consequat sagittis sem a viverra. Donec vulputate bibendum erat, a volutpat ex vestibulum eu. Mauris' , create_at: "2014-10-04 21:26:41 UTC"
+  Post.create user_id: 3, tweet: 'e posuere ultrices. Cras imperdiet lobortis erat id varius. Curabitur gravida venenatis turpis sed placerat. Morbi at felis et m', create_at: "2014-10-04 21:27:41 UTC"
+  Post.create user_id: 2, tweet: 'et sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris massa arcu, sollicitudin i', create_at: "2014-10-04 21:29:41 UTC"
+  Post.create user_id: 2, tweet: 'rdum nunc. Nulla faucibus sem a ornare accumsan. Aliquam id lectus ante. Fusce vulputate volutpat augue, vitae maximus libero dictum et. Fusce porttitor, urna eu pharetra sollicitudin, nisl massa aliquet massa, gravida hendrerit felis ex sit am',  create_at: "2014-10-04 21:32:41 UTC"
+  Post.create user_id: 3, tweet: 'ulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris massa arcu, sollicitudin in maximus ', create_at: "2014-10-04 21:33:41 UTC"
+  Post.create user_id: 5, tweet: "sequat sagittis sem a viverra. Donec vulputate bibendum erat, a volutpat ex vestibulum eu. Mauris feugiat sem eu nisi lacinia la",  create_at: "2014-10-04 21:34:41 UTC"
+  Post.create user_id: 3, tweet: 'arcu mattis lobortis. Donec non fringilla massa, sed varius ligula. Nam ac nunc luctus, luctus velit at, ultricies tortor. Aliquam placerat neque sit am', create_at: "2014-10-04 21:35:41 UTC"
+  Post.create user_id: 4, tweet: 'Etiam quis nibh rhoncus, tincidunt ex malesuada, maximus nunc. Vivamus et lobortis mau', create_at: "2014-10-04 21:36:41 UTC"
+  Post.create user_id: 1, tweet: 'tra tristique. Nam justo diam, euismod non odio quis, sollicitudin congue arcu. Phasellus varius lacus nec feugiat blandit. ', create_at: "2014-10-04 21:37:41 UTC"
+  Post.create user_id: 2, tweet: 'm et. Fusce porttitor, urna eu pharetra sollicitudin, nisl massa aliquet massa, gravida hendrerit felis ex sit amet ligula. Do', create_at: "2014-10-04 21:39:41 UTC"

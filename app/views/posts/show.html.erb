@@ -18,7 +18,7 @@
   <% @posts.each do |post| %>
     <% if post.user_id == @user.id %>
     <ul>
-      <li><%= post.tweet %> on <%= post.create_at  %></li>
+      <li><%= post.tweet %> on <%= post.create_at.strftime("%b %e, %l:%M %p") %></li>
     </ul>
     <%end%>
   <%end%>

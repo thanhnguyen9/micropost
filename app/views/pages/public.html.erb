@@ -12,17 +12,15 @@
   <h1>Hey <%= @current_user.username.capitalize %>. Recently Posts</h1>
 
   <% @posts.each do |post| %>
-    <% @users.each do |user| %>
-      <% if post.user_id == user.id %>
-        <%= image_tag user.photo_url, class: "public-image" %>
-        <%= link_to user.username, posts_show_path(id: post.user_id) %>
+
+        <%= image_tag post.user.photo_url, class: "public-image" %>
+        <%= link_to post.user.username, posts_show_path(id: post.user_id) %>
           <ul>
             <li>
               <%= post.tweet %>
+              <%= post.create_at.strftime("%b %e, %l:%M %p") %>
             </li>
           </ul>
-      <%end%>
-    <%end%>
   <%end%>
 
   <%= paginate @posts %>
