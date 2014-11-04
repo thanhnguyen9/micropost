@@ -21,7 +21,7 @@ class PagesController < ApplicationController
 
   def private
     @posts = Post.order("create_at DESC").page(params[:page])
-
+    @total = 0
 
   end
 

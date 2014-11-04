@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       redirect_to session[:return_to], notice: "You Signed in"
 
     else
-      render :new
+      render :new, notice: "Sign up fail"
     end
   end
 

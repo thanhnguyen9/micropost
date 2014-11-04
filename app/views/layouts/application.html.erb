@@ -9,6 +9,8 @@
 
   <%= javascript_include_tag "application" %>
   <%= stylesheet_link_tag "application" %>
+  <%= csrf_meta_tags %>
+
 
 
   <!-- Latest compiled and minified CSS -->
@@ -25,10 +27,12 @@
 <body>
 
 <div class="nav">
-  <span class='home'><%= link_to "Home", private_path %></span>
+  <span class='home'><%= link_to "Home", root_path %></span>
 
   <% if user_signed_in? %>
     <%= link_to "Sign Out", destroy_session_path, method: "delete" %>
+    <% else %>
+    <%= link_to "Sign In", sign_in_path %>
   <% end %>
 
   <%= notice %>

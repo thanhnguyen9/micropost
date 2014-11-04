@@ -14,11 +14,11 @@ class SessionsController < ApplicationController
 
       redirect_to session[:return_to], notice: "You Signed in"
     else
-      render :new
+      render :new, notice: "Sign in fail"
     end
   end
 
-  def sign_out
+   def sign_out
     session[:signed_in] = false
     session.delete(:user_id)
     redirect_to root_path

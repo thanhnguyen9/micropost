@@ -1,4 +1,4 @@
-
+//= require jquery_ujs
 
 $(document).ready(function() {
 
@@ -134,9 +134,9 @@ $(document).ready(function() {
 
     blanks.forEach(function(blank) {
       var userInput = $("input#" + blank).val();
-      
+      if (userInput){
         $("." + blank).text(userInput);
-
+      } else {alert("Please fill the blank");}
     });
 
     $("#story").show();
