@@ -9,7 +9,7 @@
 <div class="col-md-7 well">
 
   <% Relationship.all.each do |relationship| %>
-    <% @total += 1 if post.user_id == @current_user.id %>
+    <% @total += 1 if relationship.user_id == @current_user.id %>
   <%end%>
   <h3>People <%= @current_user.username.capitalize %> FOLLOWING: <%=@total%></h3>
 
@@ -40,10 +40,8 @@
                   <%= post.create_at %>
                   </li>
               </ul>
-
-              @total += 1
               <%end%>
-              <h3>People <%= @current_user.username.capitalize %> FOLLOWING: <%=@total%></h3>
+
           <%end%>
         <%end%>
 
